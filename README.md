@@ -9,7 +9,7 @@ You write:
 p {
 	background: color(red alpha(0.5));
 	color: color(blue tint(50%));
-	border-color: background: gray(50%);
+	border-color: gray(50%);
 }
 ```
 
