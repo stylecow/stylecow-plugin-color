@@ -34,9 +34,16 @@ module.exports = {
 		//Convert color() function to rgba/hex values
 		color: function (fn) {
 			var args = fn[0];
-			var rgba = color.toRGBA(args[0]);
+			var rgba;
 
-			args[0].remove();
+			if (args.type === 'Value') {
+				rgba = color.toRGBA(args[0]);
+				args[0].remove();
+			} else {
+				rgba = color.toRGBA(args);
+				args.remove();
+				args = [];
+			}
 
 			args.forEach(function (adjust) {
 				switch (adjust.name) {
