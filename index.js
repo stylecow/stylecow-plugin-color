@@ -6,7 +6,7 @@ module.exports = {
 
 	//Convert hex + alpha values to rgba values
 	Keyword: function (keyword) {
-		if (keyword.name[0] === '#' && (keyword.name.length === 5 || keyword.name.length === 9)) {
+		if (keyword.name[0] === '#' && (keyword.name.length === 5 || keyword.name.length === 9) && keyword.ancestor('Declaration')) {
 			var rgba = color.toRGBA(keyword.name);
 
 			if (rgba[3] === 1) {
