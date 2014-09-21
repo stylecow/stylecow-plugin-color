@@ -84,7 +84,6 @@ module.exports = {
 						rgba = color.HSLA_RGBA(hsla);
 						break;
 
-					/* hwba converted needed
 					case 'whiteness':
 					case 'w':
 						var hwba = color.RGBA_HWBA(rgba);
@@ -98,7 +97,6 @@ module.exports = {
 						hwba[2] = modify(hwba[2], adjust[0].name, 100);
 						rgba = color.HWBA_RGBA(hwba);
 						break;
-					*/
 
 					case 'blend':
 						var c = color.toRGBA(adjust[0][0]);
@@ -129,7 +127,6 @@ module.exports = {
 						rgba[2] = blend(rgba[2], 0, adjust[0].name, 255);
 						break;
 
-					/* hwba converted needed
 					case 'contrast':
 						var hsla = color.RGBA_HSLA(rgba);
 						var hwba = color.RGBA_HWBA(rgba);
@@ -140,7 +137,6 @@ module.exports = {
 							hwba[2] = modify(hwba[2], adjust[0].name, 100);
 						}
 						rgba = color.HWBA_RGBA(hwba);
-					*/
 				}
 			});
 
