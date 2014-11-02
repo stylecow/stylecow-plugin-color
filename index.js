@@ -23,12 +23,12 @@ module.exports = function (stylecow) {
 
 			//Convert gray() function to rgba/hex values
 			gray: function (fn) {
-				var rgba = color.toRGBA(fn.getValue(), 'gray');
+				var rgba = color.toRGBA(fn.getContent(), 'gray');
 
 				if (rgba[3] === 1) {
 					fn.replaceWith('#' + color.RGBA_HEX(rgba));
 				} else {
-					fn.setValue(rgba);
+					fn.setContent(rgba);
 					fn.name = 'rgba';
 				}
 			},
@@ -42,7 +42,7 @@ module.exports = function (stylecow) {
 				args[0].remove();
 
 				args.forEach(function (adjust) {
-					var args = adjust.getValue();
+					var args = adjust.getContent();
 
 					switch (adjust.name) {
 						case 'alpha':
@@ -144,7 +144,7 @@ module.exports = function (stylecow) {
 				if (rgba[3] === 1) {
 					fn.replaceWith('#' + color.RGBA_HEX(rgba));
 				} else {
-					fn.setValue(rgba).name = 'rgba';
+					fn.setContent(rgba).name = 'rgba';
 				}
 			}
 		}
