@@ -8,13 +8,13 @@ module.exports = function (stylecow) {
 
 		//Convert hex + alpha values to rgba values
 		Keyword: function (keyword) {
-			if (keyword.name[0] === '#' && (keyword.name.length === 5 || keyword.name.length === 9) && keyword.ancestor({type: 'Declaration'})) {
+			if (keyword.name[0] === '#' && (keyword.name.length === 5 || keyword.name.length === 9) && keyword.parent({type: 'Declaration'})) {
 				var rgba = color.toRGBA(keyword.name);
 
 				if (rgba[3] === 1) {
 					keyword.name = '#' + color.RGBA_HEX(rgba);
 				} else {
-					keyword.replaceWith('rgba(' + color.toRGBA(keyword.name).join(',') + ')');
+					keyword.replaceWith(stylecow.Function.createFromString('rgba(' + color.toRGBA(keyword.name).join(',') + ')'));
 				}
 			}
 		},
@@ -26,25 +26,25 @@ module.exports = function (stylecow) {
 				var rgba = color.toRGBA(fn.getContent(), 'gray');
 
 				if (rgba[3] === 1) {
-					fn.replaceWith('#' + color.RGBA_HEX(rgba));
+					fn.replaceWith(stylecow.Keyword.createFromString('#' + color.RGBA_HEX(rgba)));
 				} else {
-					fn.setContent(rgba);
-					fn.name = 'rgba';
+					fn.replaceWith(stylecow.Function.createFromString('rgba(' + rgba.join(',') + ')'));
 				}
 			},
 
 			//Convert color() function to rgba/hex values
 			color: function (fn) {
-				var args = fn[0];
 				var rgba;
 
-				rgba = color.toRGBA(args[0]);
-				args[0].remove();
+				fn[0].forEach(function (child, key) {
+					if (key === 0) {
+						rgba = color.toRGBA(child);
+						return;
+					}
 
-				args.forEach(function (adjust) {
-					var args = adjust.getContent();
+					var args = child.toArray();
 
-					switch (adjust.name) {
+					switch (child.name) {
 						case 'alpha':
 						case 'a':
 							rgba[3] = modify(rgba[3], args[0], 1);
@@ -97,8 +97,8 @@ module.exports = function (stylecow) {
 							break;
 
 						case 'blend':
-							var c = color.toRGBA(adjust[0][0]);
-							var p = adjust[0][1].toString();
+							var c = color.toRGBA(child[0][0]);
+							var p = child[0][1].toString();
 
 							rgba[0] = blend(rgba[0], c[0], p, 255);
 							rgba[1] = blend(rgba[1], c[1], p, 255);
@@ -106,8 +106,8 @@ module.exports = function (stylecow) {
 							break;
 
 						case 'blenda':
-							var c = color.toRGBA(adjust[0][0]);
-							var p = adjust[0][1].toString();
+							var c = color.toRGBA(child[0][0]);
+							var p = child[0][1].toString();
 
 							rgba[0] = blend(rgba[0], c[0], p, 255);
 							rgba[1] = blend(rgba[1], c[1], p, 255);
@@ -140,11 +140,10 @@ module.exports = function (stylecow) {
 					}
 				});
 
-
 				if (rgba[3] === 1) {
-					fn.replaceWith('#' + color.RGBA_HEX(rgba));
+					fn.replaceWith(stylecow.Keyword.createFromString('#' + color.RGBA_HEX(rgba)));
 				} else {
-					fn.setContent(rgba).name = 'rgba';
+					fn.replaceWith(stylecow.Function.createFromString('rgba(' + rgba.join(',') + ')'));
 				}
 			}
 		}
