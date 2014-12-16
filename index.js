@@ -23,7 +23,7 @@ module.exports = function (stylecow) {
 
 			//Convert gray() function to rgba/hex values
 			gray: function (fn) {
-				var rgba = color.toRGBA(fn.getContent(), 'gray');
+				var rgba = color.toRGBA(fn);
 
 				if (rgba[3] === 1) {
 					fn.replaceWith(stylecow.Keyword.createFromString('#' + color.RGBA_HEX(rgba)));
