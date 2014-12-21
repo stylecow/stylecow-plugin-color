@@ -4,10 +4,12 @@ var color = require('stylecow-color');
 
 module.exports = function (stylecow) {
 
+	//Convert hex + alpha values to rgba values
 	stylecow.addTask({
-
-		//Convert hex + alpha values to rgba values
-		Keyword: function (keyword) {
+		filter: {
+			type: 'Keyword'
+		},
+		fn: function (keyword) {
 			if (keyword.name[0] === '#' && (keyword.name.length === 5 || keyword.name.length === 9) && keyword.parent({type: 'Declaration'})) {
 				var rgba = color.toRGBA(keyword.name);
 
@@ -17,134 +19,143 @@ module.exports = function (stylecow) {
 					keyword.replaceWith(stylecow.Function.createFromString('rgba(' + color.toRGBA(keyword.name).join(',') + ')'));
 				}
 			}
+		}
+	});
+
+ 	//Convert gray() function to rgba/hex values
+ 	stylecow.addTask({
+ 		filter: {
+ 			type: 'Function',
+ 			name: 'gray'
+ 		},
+ 		fn: function (fn) {
+			var rgba = color.toRGBA(fn);
+
+			if (rgba[3] === 1) {
+				fn.replaceWith(stylecow.Keyword.createFromString('#' + color.RGBA_HEX(rgba)));
+			} else {
+				fn.replaceWith(stylecow.Function.createFromString('rgba(' + rgba.join(',') + ')'));
+			}
+		}
+	});
+
+	//Convert color() function to rgba/hex values
+	stylecow.addTask({
+		filter: {
+			type: 'Function',
+			name: 'color'
 		},
+		fn: function (fn) {
+			var rgba;
 
-		"Function": {
-
-			//Convert gray() function to rgba/hex values
-			gray: function (fn) {
-				var rgba = color.toRGBA(fn);
-
-				if (rgba[3] === 1) {
-					fn.replaceWith(stylecow.Keyword.createFromString('#' + color.RGBA_HEX(rgba)));
-				} else {
-					fn.replaceWith(stylecow.Function.createFromString('rgba(' + rgba.join(',') + ')'));
+			fn[0].forEach(function (child, key) {
+				if (key === 0) {
+					rgba = color.toRGBA(child);
+					return;
 				}
-			},
 
-			//Convert color() function to rgba/hex values
-			color: function (fn) {
-				var rgba;
+				var args = child.toArray();
 
-				fn[0].forEach(function (child, key) {
-					if (key === 0) {
-						rgba = color.toRGBA(child);
-						return;
-					}
+				switch (child.name) {
+					case 'alpha':
+					case 'a':
+						rgba[3] = modify(rgba[3], args[0], 1);
+						break;
 
-					var args = child.toArray();
+					case 'red':
+						rgba[0] = modify(rgba[0], args[0], 255);
+						break;
 
-					switch (child.name) {
-						case 'alpha':
-						case 'a':
-							rgba[3] = modify(rgba[3], args[0], 1);
-							break;
+					case 'green':
+						rgba[1] = modify(rgba[1], args[0], 255);
+						break;
 
-						case 'red':
-							rgba[0] = modify(rgba[0], args[0], 255);
-							break;
+					case 'blue':
+						rgba[2] = modify(rgba[2], args[0], 255);
+						break;
 
-						case 'green':
-							rgba[1] = modify(rgba[1], args[0], 255);
-							break;
+					case 'rgb':
+						rgba[0] = modify(rgba[0], args[0], 255);
+						rgba[1] = modify(rgba[1], args[1], 255);
+						rgba[2] = modify(rgba[2], args[2], 255);
+						break;
 
-						case 'blue':
-							rgba[2] = modify(rgba[2], args[0], 255);
-							break;
+					case 'saturation':
+					case 's':
+						var hsla = color.RGBA_HSLA(rgba);
+						hsla[1] = modify(hsla[1], args[0], 100);
+						rgba = color.HSLA_RGBA(hsla);
+						break;
 
-						case 'rgb':
-							rgba[0] = modify(rgba[0], args[0], 255);
-							rgba[1] = modify(rgba[1], args[1], 255);
-							rgba[2] = modify(rgba[2], args[2], 255);
-							break;
+					case 'lightness':
+					case 'l':
+						var hsla = color.RGBA_HSLA(rgba);
+						hsla[2] = modify(hsla[2], args[0], 100);
+						rgba = color.HSLA_RGBA(hsla);
+						break;
 
-						case 'saturation':
-						case 's':
-							var hsla = color.RGBA_HSLA(rgba);
-							hsla[1] = modify(hsla[1], args[0], 100);
-							rgba = color.HSLA_RGBA(hsla);
-							break;
+					case 'whiteness':
+					case 'w':
+						var hwba = color.RGBA_HWBA(rgba);
+						hwba[1] = modify(hwba[1], args[0], 100);
+						rgba = color.HWBA_RGBA(hwba);
+						break;
 
-						case 'lightness':
-						case 'l':
-							var hsla = color.RGBA_HSLA(rgba);
-							hsla[2] = modify(hsla[2], args[0], 100);
-							rgba = color.HSLA_RGBA(hsla);
-							break;
+					case 'blackness':
+					case 'b':
+						var hwba = color.RGBA_HWBA(rgba);
+						hwba[2] = modify(hwba[2], args[0], 100);
+						rgba = color.HWBA_RGBA(hwba);
+						break;
 
-						case 'whiteness':
-						case 'w':
-							var hwba = color.RGBA_HWBA(rgba);
+					case 'blend':
+						var c = color.toRGBA(child[0][0]);
+						var p = child[0][1].toString();
+
+						rgba[0] = blend(rgba[0], c[0], p, 255);
+						rgba[1] = blend(rgba[1], c[1], p, 255);
+						rgba[2] = blend(rgba[2], c[2], p, 255);
+						break;
+
+					case 'blenda':
+						var c = color.toRGBA(child[0][0]);
+						var p = child[0][1].toString();
+
+						rgba[0] = blend(rgba[0], c[0], p, 255);
+						rgba[1] = blend(rgba[1], c[1], p, 255);
+						rgba[2] = blend(rgba[2], c[2], p, 255);
+						rgba[3] = blend(rgba[3], c[3], p, 1);
+						break;
+
+					case 'tint':
+						rgba[0] = blend(rgba[0], 255, args[0], 255);
+						rgba[1] = blend(rgba[1], 255, args[0], 255);
+						rgba[2] = blend(rgba[2], 255, args[0], 255);
+						break;
+
+					case 'shade':
+						rgba[0] = blend(rgba[0], 0, args[0], 255);
+						rgba[1] = blend(rgba[1], 0, args[0], 255);
+						rgba[2] = blend(rgba[2], 0, args[0], 255);
+						break;
+
+					case 'contrast':
+						var hsla = color.RGBA_HSLA(rgba);
+						var hwba = color.RGBA_HWBA(rgba);
+
+						if (hsla[2] < 50) { //is dark +50%
 							hwba[1] = modify(hwba[1], args[0], 100);
-							rgba = color.HWBA_RGBA(hwba);
-							break;
-
-						case 'blackness':
-						case 'b':
-							var hwba = color.RGBA_HWBA(rgba);
+						} else {
 							hwba[2] = modify(hwba[2], args[0], 100);
-							rgba = color.HWBA_RGBA(hwba);
-							break;
-
-						case 'blend':
-							var c = color.toRGBA(child[0][0]);
-							var p = child[0][1].toString();
-
-							rgba[0] = blend(rgba[0], c[0], p, 255);
-							rgba[1] = blend(rgba[1], c[1], p, 255);
-							rgba[2] = blend(rgba[2], c[2], p, 255);
-							break;
-
-						case 'blenda':
-							var c = color.toRGBA(child[0][0]);
-							var p = child[0][1].toString();
-
-							rgba[0] = blend(rgba[0], c[0], p, 255);
-							rgba[1] = blend(rgba[1], c[1], p, 255);
-							rgba[2] = blend(rgba[2], c[2], p, 255);
-							rgba[3] = blend(rgba[3], c[3], p, 1);
-							break;
-
-						case 'tint':
-							rgba[0] = blend(rgba[0], 255, args[0], 255);
-							rgba[1] = blend(rgba[1], 255, args[0], 255);
-							rgba[2] = blend(rgba[2], 255, args[0], 255);
-							break;
-
-						case 'shade':
-							rgba[0] = blend(rgba[0], 0, args[0], 255);
-							rgba[1] = blend(rgba[1], 0, args[0], 255);
-							rgba[2] = blend(rgba[2], 0, args[0], 255);
-							break;
-
-						case 'contrast':
-							var hsla = color.RGBA_HSLA(rgba);
-							var hwba = color.RGBA_HWBA(rgba);
-
-							if (hsla[2] < 50) { //is dark +50%
-								hwba[1] = modify(hwba[1], args[0], 100);
-							} else {
-								hwba[2] = modify(hwba[2], args[0], 100);
-							}
-							rgba = color.HWBA_RGBA(hwba);
-					}
-				});
-
-				if (rgba[3] === 1) {
-					fn.replaceWith(stylecow.Keyword.createFromString('#' + color.RGBA_HEX(rgba)));
-				} else {
-					fn.replaceWith(stylecow.Function.createFromString('rgba(' + rgba.join(',') + ')'));
+						}
+						rgba = color.HWBA_RGBA(hwba);
 				}
+			});
+
+			if (rgba[3] === 1) {
+				fn.replaceWith(stylecow.Keyword.createFromString('#' + color.RGBA_HEX(rgba)));
+			} else {
+				fn.replaceWith(stylecow.Function.createFromString('rgba(' + rgba.join(',') + ')'));
 			}
 		}
 	});
