@@ -10,7 +10,7 @@ module.exports = function (stylecow) {
 			type: 'Keyword'
 		},
 		fn: function (keyword) {
-			if (keyword.name[0] === '#' && (keyword.name.length === 5 || keyword.name.length === 9) && keyword.parent({type: 'Declaration'})) {
+			if (keyword.name[0] === '#' && (keyword.name.length === 5 || keyword.name.length === 9) && keyword.parent('Declaration')) {
 				var rgba = color.toRGBA(keyword.name);
 
 				if (rgba[3] === 1) {
