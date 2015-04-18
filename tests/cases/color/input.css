@@ -1,0 +1,61 @@
+div {
+	color: color(red);
+}
+div {
+	color: color(blue tint(50%));
+	color: color(blue tint(25%));
+}
+div {
+	color: color(blue tint(50%) alpha(0.5));
+	color: color(blue tint(25%) a(0.5));
+}
+div {
+	color: color(black red(128));
+	color: color(black blue(128));
+	color: color(black green(128));
+	color: color(black red(128) blue(128) green(128));
+}
+div {
+	color: color(red saturation(100%));
+	color: color(red saturation(0%));
+	color: color(red s(100%));
+	color: color(red s(0%));
+}
+div {
+	color: color(red lightness(100%));
+	color: color(red lightness(0%));
+	color: color(red l(100%));
+	color: color(red l(0%));
+}
+div {
+	color: color(red whiteness(100%));
+	color: color(red whiteness(0%));
+	color: color(red w(100%));
+	color: color(red w(0%));
+}
+div {
+	color: color(red blackness(100%));
+	color: color(red blackness(0%));
+	color: color(red b(100%));
+	color: color(red b(0%));
+}
+div {
+	color: color(red blend(rgba(128, 0, 50) 100%));
+	color: color(red blend(rgba(128, 0, 50) 50%));
+	color: color(red blend(rgba(128, 0, 50) 0%));
+}
+div {
+	color: color(red blenda(rgba(128, 0, 50) 100%));
+	color: color(red blenda(rgba(128, 0, 50) 50%));
+	color: color(red blenda(rgba(128, 0, 50) 0%));
+}
+div {
+	color: color(red shade(50));
+	color: color(red shade(20));
+	color: color(red shade(100));
+}
+div {
+	color: color(red contrast(25));
+	color: color(red contrast(50));
+	color: color(red contrast(100));
+}

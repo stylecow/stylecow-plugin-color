@@ -7,16 +7,16 @@ module.exports = function (stylecow) {
 	//Convert hex + alpha values to rgba values
 	stylecow.addTask({
 		filter: {
-			type: 'Keyword'
+			type: 'Hex'
 		},
-		fn: function (keyword) {
-			if (keyword.name[0] === '#' && (keyword.name.length === 5 || keyword.name.length === 9) && keyword.parent('Declaration')) {
-				var rgba = color.toRGBA(keyword.name);
+		fn: function (hex) {
+			if ((hex.name.length === 4 || hex.name.length === 8)) {
+				var rgba = color.HEX_RGBA(hex.name);
 
 				if (rgba[3] === 1) {
-					keyword.name = '#' + color.RGBA_HEX(rgba);
+					hex.setName(color.RGBA_HEX(rgba));
 				} else {
-					keyword.replaceWith(stylecow.Function.createFromString('rgba(' + color.toRGBA(keyword.name).join(',') + ')'));
+					hex.replaceWith(stylecow.parse('rgba(' + rgba.join(',') + ')', 'Function'));
 				}
 			}
 		}
@@ -32,9 +32,9 @@ module.exports = function (stylecow) {
 			var rgba = color.toRGBA(fn);
 
 			if (rgba[3] === 1) {
-				fn.replaceWith(stylecow.Keyword.createFromString('#' + color.RGBA_HEX(rgba)));
+				fn.replaceWith((new stylecow.Hex()).setName(color.RGBA_HEX(rgba)));
 			} else {
-				fn.replaceWith(stylecow.Function.createFromString('rgba(' + rgba.join(',') + ')'));
+				fn.replaceWith(stylecow.parse('rgba(' + rgba.join(',') + ')', 'Function'));
 			}
 		}
 	});
@@ -153,9 +153,9 @@ module.exports = function (stylecow) {
 			});
 
 			if (rgba[3] === 1) {
-				fn.replaceWith(stylecow.Keyword.createFromString('#' + color.RGBA_HEX(rgba)));
+				fn.replaceWith((new stylecow.Hex()).setName(color.RGBA_HEX(rgba)));
 			} else {
-				fn.replaceWith(stylecow.Function.createFromString('rgba(' + rgba.join(',') + ')'));
+				fn.replaceWith(stylecow.parse('rgba(' + rgba.join(',') + ')', 'Function'));
 			}
 		}
 	});

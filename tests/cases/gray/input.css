@@ -1,0 +1,24 @@
+div {
+	color: gray(50%);
+}
+div {
+	color: gray(128);
+}
+div {
+	color: gray(0);
+}
+div {
+	color: gray(100%);
+}
+div {
+	color: gray(50%, 0.5);
+}
+div {
+	color: gray(128, 0.5);
+}
+div {
+	color: gray(0, 0.5);
+}
+div {
+	color: gray(100%, 0.5);
+}
