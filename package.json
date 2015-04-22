@@ -1,7 +1,7 @@
 {
 	"name": "stylecow-plugin-color",
 	"description": "Stylecow plugin to add support for CSS Color Module Level 4",
-	"version": "4.0.0",
+	"version": "4.0.1",
 	"author": "Oscar Otero <oom@oscarotero.com>",
 	"homepage": "https://github.com/stylecow/stylecow-plugin-color",
 	"bugs": "https://github.com/stylecow/stylecow-plugin-color/issues",
