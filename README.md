@@ -1,5 +1,4 @@
-stylecow plugin color
-=====================
+# stylecow plugin color
 
 Stylecow plugin to add support for [CSS Color Module Level 4](http://dev.w3.org/csswg/css-color/)
 
@@ -44,3 +43,5 @@ p {
 	border-color: #7F7F7F;
 }
 ```
+
+More demos in [the tests folder](https://github.com/stylecow/stylecow-plugin-color/tree/master/tests/cases)
