@@ -30,8 +30,38 @@
                   "class": "Value",
                   "children": [
                     {
-                      "class": "Hex",
-                      "name": "FF0000"
+                      "class": "Function",
+                      "name": "rgb",
+                      "vendor": null,
+                      "children": [
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 255
+                            }
+                          ]
+                        },
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 0
+                            }
+                          ]
+                        },
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 0
+                            }
+                          ]
+                        }
+                      ]
                     }
                   ]
                 }
@@ -70,8 +100,38 @@
                   "class": "Value",
                   "children": [
                     {
-                      "class": "Hex",
-                      "name": "7F7FFF"
+                      "class": "Function",
+                      "name": "rgb",
+                      "vendor": null,
+                      "children": [
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 128
+                            }
+                          ]
+                        },
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 128
+                            }
+                          ]
+                        },
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 255
+                            }
+                          ]
+                        }
+                      ]
                     }
                   ]
                 }
@@ -86,8 +146,38 @@
                   "class": "Value",
                   "children": [
                     {
-                      "class": "Hex",
-                      "name": "BFBFFF"
+                      "class": "Function",
+                      "name": "rgb",
+                      "vendor": null,
+                      "children": [
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 64
+                            }
+                          ]
+                        },
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 64
+                            }
+                          ]
+                        },
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 255
+                            }
+                          ]
+                        }
+                      ]
                     }
                   ]
                 }
@@ -135,7 +225,7 @@
                           "children": [
                             {
                               "class": "Number",
-                              "name": 127
+                              "name": 128
                             }
                           ]
                         },
@@ -144,7 +234,7 @@
                           "children": [
                             {
                               "class": "Number",
-                              "name": 127
+                              "name": 128
                             }
                           ]
                         },
@@ -190,7 +280,7 @@
                           "children": [
                             {
                               "class": "Number",
-                              "name": 191
+                              "name": 64
                             }
                           ]
                         },
@@ -199,7 +289,7 @@
                           "children": [
                             {
                               "class": "Number",
-                              "name": 191
+                              "name": 64
                             }
                           ]
                         },
@@ -260,8 +350,38 @@
                   "class": "Value",
                   "children": [
                     {
-                      "class": "Hex",
-                      "name": "800000"
+                      "class": "Function",
+                      "name": "rgb",
+                      "vendor": null,
+                      "children": [
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 128
+                            }
+                          ]
+                        },
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 0
+                            }
+                          ]
+                        },
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 0
+                            }
+                          ]
+                        }
+                      ]
                     }
                   ]
                 }
@@ -276,8 +396,38 @@
                   "class": "Value",
                   "children": [
                     {
-                      "class": "Hex",
-                      "name": "000080"
+                      "class": "Function",
+                      "name": "rgb",
+                      "vendor": null,
+                      "children": [
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 0
+                            }
+                          ]
+                        },
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 0
+                            }
+                          ]
+                        },
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 128
+                            }
+                          ]
+                        }
+                      ]
                     }
                   ]
                 }
@@ -292,8 +442,38 @@
                   "class": "Value",
                   "children": [
                     {
-                      "class": "Hex",
-                      "name": "008000"
+                      "class": "Function",
+                      "name": "rgb",
+                      "vendor": null,
+                      "children": [
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 0
+                            }
+                          ]
+                        },
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 128
+                            }
+                          ]
+                        },
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 0
+                            }
+                          ]
+                        }
+                      ]
                     }
                   ]
                 }
@@ -308,8 +488,38 @@
                   "class": "Value",
                   "children": [
                     {
-                      "class": "Hex",
-                      "name": "808080"
+                      "class": "Function",
+                      "name": "rgb",
+                      "vendor": null,
+                      "children": [
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 128
+                            }
+                          ]
+                        },
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 128
+                            }
+                          ]
+                        },
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 128
+                            }
+                          ]
+                        }
+                      ]
                     }
                   ]
                 }
@@ -348,8 +558,38 @@
                   "class": "Value",
                   "children": [
                     {
-                      "class": "Hex",
-                      "name": "FF0000"
+                      "class": "Function",
+                      "name": "rgb",
+                      "vendor": null,
+                      "children": [
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 255
+                            }
+                          ]
+                        },
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 0
+                            }
+                          ]
+                        },
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 0
+                            }
+                          ]
+                        }
+                      ]
                     }
                   ]
                 }
@@ -364,8 +604,38 @@
                   "class": "Value",
                   "children": [
                     {
-                      "class": "Hex",
-                      "name": "808080"
+                      "class": "Function",
+                      "name": "rgb",
+                      "vendor": null,
+                      "children": [
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 128
+                            }
+                          ]
+                        },
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 128
+                            }
+                          ]
+                        },
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 128
+                            }
+                          ]
+                        }
+                      ]
                     }
                   ]
                 }
@@ -380,8 +650,38 @@
                   "class": "Value",
                   "children": [
                     {
-                      "class": "Hex",
-                      "name": "FF0000"
+                      "class": "Function",
+                      "name": "rgb",
+                      "vendor": null,
+                      "children": [
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 255
+                            }
+                          ]
+                        },
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 0
+                            }
+                          ]
+                        },
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 0
+                            }
+                          ]
+                        }
+                      ]
                     }
                   ]
                 }
@@ -396,8 +696,38 @@
                   "class": "Value",
                   "children": [
                     {
-                      "class": "Hex",
-                      "name": "808080"
+                      "class": "Function",
+                      "name": "rgb",
+                      "vendor": null,
+                      "children": [
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 128
+                            }
+                          ]
+                        },
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 128
+                            }
+                          ]
+                        },
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 128
+                            }
+                          ]
+                        }
+                      ]
                     }
                   ]
                 }
@@ -436,8 +766,38 @@
                   "class": "Value",
                   "children": [
                     {
-                      "class": "Hex",
-                      "name": "FFFFFF"
+                      "class": "Function",
+                      "name": "rgb",
+                      "vendor": null,
+                      "children": [
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 255
+                            }
+                          ]
+                        },
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 255
+                            }
+                          ]
+                        },
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 255
+                            }
+                          ]
+                        }
+                      ]
                     }
                   ]
                 }
@@ -452,8 +812,38 @@
                   "class": "Value",
                   "children": [
                     {
-                      "class": "Hex",
-                      "name": "000000"
+                      "class": "Function",
+                      "name": "rgb",
+                      "vendor": null,
+                      "children": [
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 0
+                            }
+                          ]
+                        },
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 0
+                            }
+                          ]
+                        },
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 0
+                            }
+                          ]
+                        }
+                      ]
                     }
                   ]
                 }
@@ -468,8 +858,38 @@
                   "class": "Value",
                   "children": [
                     {
-                      "class": "Hex",
-                      "name": "FFFFFF"
+                      "class": "Function",
+                      "name": "rgb",
+                      "vendor": null,
+                      "children": [
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 255
+                            }
+                          ]
+                        },
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 255
+                            }
+                          ]
+                        },
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 255
+                            }
+                          ]
+                        }
+                      ]
                     }
                   ]
                 }
@@ -484,8 +904,38 @@
                   "class": "Value",
                   "children": [
                     {
-                      "class": "Hex",
-                      "name": "000000"
+                      "class": "Function",
+                      "name": "rgb",
+                      "vendor": null,
+                      "children": [
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 0
+                            }
+                          ]
+                        },
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 0
+                            }
+                          ]
+                        },
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 0
+                            }
+                          ]
+                        }
+                      ]
                     }
                   ]
                 }
@@ -524,8 +974,38 @@
                   "class": "Value",
                   "children": [
                     {
-                      "class": "Hex",
-                      "name": "FFFFFF"
+                      "class": "Function",
+                      "name": "rgb",
+                      "vendor": null,
+                      "children": [
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 255
+                            }
+                          ]
+                        },
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 255
+                            }
+                          ]
+                        },
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 255
+                            }
+                          ]
+                        }
+                      ]
                     }
                   ]
                 }
@@ -540,8 +1020,38 @@
                   "class": "Value",
                   "children": [
                     {
-                      "class": "Hex",
-                      "name": "FF0000"
+                      "class": "Function",
+                      "name": "rgb",
+                      "vendor": null,
+                      "children": [
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 255
+                            }
+                          ]
+                        },
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 0
+                            }
+                          ]
+                        },
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 0
+                            }
+                          ]
+                        }
+                      ]
                     }
                   ]
                 }
@@ -556,8 +1066,38 @@
                   "class": "Value",
                   "children": [
                     {
-                      "class": "Hex",
-                      "name": "FFFFFF"
+                      "class": "Function",
+                      "name": "rgb",
+                      "vendor": null,
+                      "children": [
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 255
+                            }
+                          ]
+                        },
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 255
+                            }
+                          ]
+                        },
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 255
+                            }
+                          ]
+                        }
+                      ]
                     }
                   ]
                 }
@@ -572,8 +1112,38 @@
                   "class": "Value",
                   "children": [
                     {
-                      "class": "Hex",
-                      "name": "FF0000"
+                      "class": "Function",
+                      "name": "rgb",
+                      "vendor": null,
+                      "children": [
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 255
+                            }
+                          ]
+                        },
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 0
+                            }
+                          ]
+                        },
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 0
+                            }
+                          ]
+                        }
+                      ]
                     }
                   ]
                 }
@@ -612,8 +1182,38 @@
                   "class": "Value",
                   "children": [
                     {
-                      "class": "Hex",
-                      "name": "000000"
+                      "class": "Function",
+                      "name": "rgb",
+                      "vendor": null,
+                      "children": [
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 0
+                            }
+                          ]
+                        },
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 0
+                            }
+                          ]
+                        },
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 0
+                            }
+                          ]
+                        }
+                      ]
                     }
                   ]
                 }
@@ -628,8 +1228,38 @@
                   "class": "Value",
                   "children": [
                     {
-                      "class": "Hex",
-                      "name": "FF0000"
+                      "class": "Function",
+                      "name": "rgb",
+                      "vendor": null,
+                      "children": [
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 255
+                            }
+                          ]
+                        },
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 0
+                            }
+                          ]
+                        },
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 0
+                            }
+                          ]
+                        }
+                      ]
                     }
                   ]
                 }
@@ -644,8 +1274,38 @@
                   "class": "Value",
                   "children": [
                     {
-                      "class": "Hex",
-                      "name": "000000"
+                      "class": "Function",
+                      "name": "rgb",
+                      "vendor": null,
+                      "children": [
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 0
+                            }
+                          ]
+                        },
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 0
+                            }
+                          ]
+                        },
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 0
+                            }
+                          ]
+                        }
+                      ]
                     }
                   ]
                 }
@@ -660,8 +1320,38 @@
                   "class": "Value",
                   "children": [
                     {
-                      "class": "Hex",
-                      "name": "FF0000"
+                      "class": "Function",
+                      "name": "rgb",
+                      "vendor": null,
+                      "children": [
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 255
+                            }
+                          ]
+                        },
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 0
+                            }
+                          ]
+                        },
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 0
+                            }
+                          ]
+                        }
+                      ]
                     }
                   ]
                 }
@@ -700,8 +1390,38 @@
                   "class": "Value",
                   "children": [
                     {
-                      "class": "Hex",
-                      "name": "FF0000"
+                      "class": "Function",
+                      "name": "rgb",
+                      "vendor": null,
+                      "children": [
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 255
+                            }
+                          ]
+                        },
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 0
+                            }
+                          ]
+                        },
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 0
+                            }
+                          ]
+                        }
+                      ]
                     }
                   ]
                 }
@@ -716,8 +1436,38 @@
                   "class": "Value",
                   "children": [
                     {
-                      "class": "Hex",
-                      "name": "C00019"
+                      "class": "Function",
+                      "name": "rgb",
+                      "vendor": null,
+                      "children": [
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 255
+                            }
+                          ]
+                        },
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 0
+                            }
+                          ]
+                        },
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 0
+                            }
+                          ]
+                        }
+                      ]
                     }
                   ]
                 }
@@ -732,8 +1482,38 @@
                   "class": "Value",
                   "children": [
                     {
-                      "class": "Hex",
-                      "name": "800032"
+                      "class": "Function",
+                      "name": "rgb",
+                      "vendor": null,
+                      "children": [
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 255
+                            }
+                          ]
+                        },
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 0
+                            }
+                          ]
+                        },
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 0
+                            }
+                          ]
+                        }
+                      ]
                     }
                   ]
                 }
@@ -772,8 +1552,38 @@
                   "class": "Value",
                   "children": [
                     {
-                      "class": "Hex",
-                      "name": "FF0000"
+                      "class": "Function",
+                      "name": "rgb",
+                      "vendor": null,
+                      "children": [
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 128
+                            }
+                          ]
+                        },
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 0
+                            }
+                          ]
+                        },
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 0
+                            }
+                          ]
+                        }
+                      ]
                     }
                   ]
                 }
@@ -788,8 +1598,38 @@
                   "class": "Value",
                   "children": [
                     {
-                      "class": "Hex",
-                      "name": "C00019"
+                      "class": "Function",
+                      "name": "rgb",
+                      "vendor": null,
+                      "children": [
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 204
+                            }
+                          ]
+                        },
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 0
+                            }
+                          ]
+                        },
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 0
+                            }
+                          ]
+                        }
+                      ]
                     }
                   ]
                 }
@@ -804,8 +1644,38 @@
                   "class": "Value",
                   "children": [
                     {
-                      "class": "Hex",
-                      "name": "800032"
+                      "class": "Function",
+                      "name": "rgb",
+                      "vendor": null,
+                      "children": [
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 0
+                            }
+                          ]
+                        },
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 0
+                            }
+                          ]
+                        },
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 0
+                            }
+                          ]
+                        }
+                      ]
                     }
                   ]
                 }
@@ -844,8 +1714,38 @@
                   "class": "Value",
                   "children": [
                     {
-                      "class": "Hex",
-                      "name": "7F0000"
+                      "class": "Function",
+                      "name": "rgb",
+                      "vendor": null,
+                      "children": [
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 255
+                            }
+                          ]
+                        },
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 255
+                            }
+                          ]
+                        },
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 255
+                            }
+                          ]
+                        }
+                      ]
                     }
                   ]
                 }
@@ -860,8 +1760,38 @@
                   "class": "Value",
                   "children": [
                     {
-                      "class": "Hex",
-                      "name": "330000"
+                      "class": "Function",
+                      "name": "rgb",
+                      "vendor": null,
+                      "children": [
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 255
+                            }
+                          ]
+                        },
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 255
+                            }
+                          ]
+                        },
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 255
+                            }
+                          ]
+                        }
+                      ]
                     }
                   ]
                 }
@@ -876,80 +1806,38 @@
                   "class": "Value",
                   "children": [
                     {
-                      "class": "Hex",
-                      "name": "FF0000"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "class": "Rule",
-      "children": [
-        {
-          "class": "Selectors",
-          "children": [
-            {
-              "class": "Selector",
-              "children": [
-                {
-                  "class": "TypeSelector",
-                  "name": "div"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "class": "Block",
-          "children": [
-            {
-              "class": "Declaration",
-              "name": "color",
-              "vendor": null,
-              "children": [
-                {
-                  "class": "Value",
-                  "children": [
-                    {
-                      "class": "Hex",
-                      "name": "BF0000"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "class": "Declaration",
-              "name": "color",
-              "vendor": null,
-              "children": [
-                {
-                  "class": "Value",
-                  "children": [
-                    {
-                      "class": "Hex",
-                      "name": "800000"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "class": "Declaration",
-              "name": "color",
-              "vendor": null,
-              "children": [
-                {
-                  "class": "Value",
-                  "children": [
-                    {
-                      "class": "Hex",
-                      "name": "000000"
+                      "class": "Function",
+                      "name": "rgb",
+                      "vendor": null,
+                      "children": [
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 255
+                            }
+                          ]
+                        },
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 255
+                            }
+                          ]
+                        },
+                        {
+                          "class": "Value",
+                          "children": [
+                            {
+                              "class": "Number",
+                              "name": 255
+                            }
+                          ]
+                        }
+                      ]
                     }
                   ]
                 }

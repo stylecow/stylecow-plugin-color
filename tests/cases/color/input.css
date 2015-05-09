@@ -40,14 +40,9 @@ div {
 	color: color(red b(0%));
 }
 div {
-	color: color(red blend(rgba(128, 0, 50) 100%));
-	color: color(red blend(rgba(128, 0, 50) 50%));
-	color: color(red blend(rgba(128, 0, 50) 0%));
-}
-div {
-	color: color(red blenda(rgba(128, 0, 50) 100%));
-	color: color(red blenda(rgba(128, 0, 50) 50%));
-	color: color(red blenda(rgba(128, 0, 50) 0%));
+	color: color(red blend(red 100%));
+	color: color(red blend(red 50%));
+	color: color(red blend(red 0%));
 }
 div {
 	color: color(red shade(50));

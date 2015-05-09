@@ -1,61 +1,56 @@
 div {
-	color: #FF0000;
+	color: rgb(255, 0, 0);
 }
 div {
-	color: #7F7FFF;
-	color: #BFBFFF;
+	color: rgb(128, 128, 255);
+	color: rgb(64, 64, 255);
 }
 div {
-	color: rgba(127, 127, 255, 0.5);
-	color: rgba(191, 191, 255, 0.5);
+	color: rgba(128, 128, 255, 0.5);
+	color: rgba(64, 64, 255, 0.5);
 }
 div {
-	color: #800000;
-	color: #000080;
-	color: #008000;
-	color: #808080;
+	color: rgb(128, 0, 0);
+	color: rgb(0, 0, 128);
+	color: rgb(0, 128, 0);
+	color: rgb(128, 128, 128);
 }
 div {
-	color: #FF0000;
-	color: #808080;
-	color: #FF0000;
-	color: #808080;
+	color: rgb(255, 0, 0);
+	color: rgb(128, 128, 128);
+	color: rgb(255, 0, 0);
+	color: rgb(128, 128, 128);
 }
 div {
-	color: #FFFFFF;
-	color: #000000;
-	color: #FFFFFF;
-	color: #000000;
+	color: rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
+	color: rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
 }
 div {
-	color: #FFFFFF;
-	color: #FF0000;
-	color: #FFFFFF;
-	color: #FF0000;
+	color: rgb(255, 255, 255);
+	color: rgb(255, 0, 0);
+	color: rgb(255, 255, 255);
+	color: rgb(255, 0, 0);
 }
 div {
-	color: #000000;
-	color: #FF0000;
-	color: #000000;
-	color: #FF0000;
+	color: rgb(0, 0, 0);
+	color: rgb(255, 0, 0);
+	color: rgb(0, 0, 0);
+	color: rgb(255, 0, 0);
 }
 div {
-	color: #FF0000;
-	color: #C00019;
-	color: #800032;
+	color: rgb(255, 0, 0);
+	color: rgb(255, 0, 0);
+	color: rgb(255, 0, 0);
 }
 div {
-	color: #FF0000;
-	color: #C00019;
-	color: #800032;
+	color: rgb(128, 0, 0);
+	color: rgb(204, 0, 0);
+	color: rgb(0, 0, 0);
 }
 div {
-	color: #7F0000;
-	color: #330000;
-	color: #FF0000;
-}
-div {
-	color: #BF0000;
-	color: #800000;
-	color: #000000;
+	color: rgb(255, 255, 255);
+	color: rgb(255, 255, 255);
+	color: rgb(255, 255, 255);
 }
