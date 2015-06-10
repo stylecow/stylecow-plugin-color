@@ -15,6 +15,7 @@
     "css-color-function": "^1.2.1"
   },
   "devDependencies": {
+    "mocha": "^2.2.5",
     "stylecow": "6.*"
   },
   "scripts": {
