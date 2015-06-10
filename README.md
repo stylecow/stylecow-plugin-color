@@ -1,4 +1,7 @@
-# stylecow plugin color
+stylecow plugin color
+=====================
+
+[![Build Status](https://travis-ci.org/stylecow/stylecow-plugin-color.svg?branch=master)](https://travis-ci.org/stylecow/stylecow-plugin-color)
 
 Stylecow plugin to add support for [CSS Color Module Level 4](http://dev.w3.org/csswg/css-color/)
 
